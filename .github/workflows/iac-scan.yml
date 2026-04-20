@@ -24,6 +24,6 @@ jobs:
           output_format: json                       # Optional: Format of output
           output_file_path: "./results.json"        # Optional: Output file path
           soft_fail: true                           # Optional: Will continue after found vulnerability 
-          accuknox_token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg0MzU0Mjg4LCJqdGkiOiJmNDYzNTM3Yzc3N2E0OTc5OTJjZDIyY2I1ZGJiYmE0ZSIsInRlbmFudC1pZCI6MzczMCwiaXNzIjoiY3NwbS5kZW1vLmFjY3Vrbm94LmNvbSJ9.B2s09ZjxLq1YlcDmjdFUnPX4MiqkvMnKawJPRu_i8pOR59rM1LSbEqjjLIaUHcw7dKVkR6ltoDNEwnxcA0q0X0g0hIV4lwpgLj26Fkan_IIFSSLZaNomWFvmd96rVY7WVTdZkurydhNg6tTJT6TeL_JbuDLsT90WCOh7wgrvsYVcvkF7QxM5fFcNn-RQsdEuQQ12u1u1tjAjvwA5V6WN_fP0XbhHz-VepWwEc2XgKQtQUlcXObYjtG8w745J8q7pMEY4HvO_7m75K0EGZD59qrbzu8Ir84ix3jvGWGIctvMBmMnEYOk5u43TxFbTQDhofhmHPp3-vikIZrwCzePpTw
-          accuknox_endpoint: cspm.demo.accuknox.com
-          accuknox_label: container2
+          accuknox_token: ${{ secrets.TOKEN }}
+          accuknox_endpoint: ${{ secrets.ENDPOINT }}
+          accuknox_label: ${{ secrets.LABEL }}
