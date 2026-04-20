@@ -32,5 +32,3 @@ jobs:
           severity: "UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL"
           soft_fail: true
           upload_results: true
-          generate_sbom: true
-          project_name: ""
