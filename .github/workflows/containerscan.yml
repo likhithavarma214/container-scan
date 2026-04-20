@@ -17,7 +17,6 @@ jobs:
 
       - name: Run AccuKnox Container Scanner
         uses: accuknox/container-scan-action@latest
-      
         with:
           accuknox_token: ${{ secrets.ACCUKNOX_TOKEN }}
           accuknox_label: ${{ secrets.ACCUKNOX_LABEL }}
@@ -26,7 +25,7 @@ jobs:
           tag: "latest"
           severity: "UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL"
           soft_fail: true
-          upload_results: true  # (Optional) set true if you want to upload result to Github artefact
-          generate_sbom: true   # (Optional) set true to generate SBOM
-          project_name: ""      # (Optional) must match the project name created in the dashboard
-          dockerfile_context: "."  # Path to Dockerfile for building image before scan 
+          upload_results: true
+          generate_sbom: true
+          project_name: ""
+          dockerfile_context: "."
