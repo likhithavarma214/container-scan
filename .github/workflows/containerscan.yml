@@ -29,3 +29,4 @@ jobs:
           generate_sbom: true
           project_name: ""
           dockerfile_context: "."
+          dockerfile: "Dockerfile"
