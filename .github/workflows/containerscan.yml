@@ -11,10 +11,16 @@ on:
 jobs:
   container-scan:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 🔥 STEP 1: Build Docker image manually
+      - name: Build Docker Image
+        run: docker build -t my-app:latest .
+
+      # 🔥 STEP 2: Run AccuKnox Scanner
       - name: Run AccuKnox Container Scanner
         uses: accuknox/container-scan-action@latest
         with:
@@ -28,5 +34,3 @@ jobs:
           upload_results: true
           generate_sbom: true
           project_name: ""
-          dockerfile_context: "."
-          dockerfile: "Dockerfile"
